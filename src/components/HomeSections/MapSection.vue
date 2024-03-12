@@ -7,7 +7,7 @@ import {
   YandexMapListener,
   YandexMapMarker
 } from 'vue-yandex-maps';
-import DumpInfo from "@/components/Dialog.vue";
+import DumpInfo from "@/components/DumpInfo.vue";
 
 const map = shallowRef(null);
 
@@ -33,7 +33,7 @@ const logMapClick = (_, event) => {
 <template>
   <div class="map-container">
     <div class="map-container_header">
-      <img class="map-container_header__icon" src="@/assets/icons/news.png" alt="news">
+      <img class="map-container_header__icon" src="../../assets/icons/dump.png" alt="news">
       <p>Отметить свалку</p>
     </div>
 
@@ -56,7 +56,7 @@ const logMapClick = (_, event) => {
             v-if="showMarker"
             :settings="{coordinates: [latitude, longitude]}">
           <template #default>
-            <img src="@/assets/icons/marker.png" alt="dump" style="width: 4rem">
+            <img src="../../assets/icons/marker.png" alt="dump" style="width: 4rem">
           </template>
         </yandex-map-marker>
       </yandex-map>

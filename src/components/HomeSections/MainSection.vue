@@ -5,7 +5,6 @@
   <div class="main">
     <div class="main__bg"></div>
     <p class="main__title">НОВОСИБИРСКАЯ ЭКОЛОГИЧЕСКАЯ АКАДЕМИЯ</p>
-
   </div>
 </template>
 
@@ -30,7 +29,7 @@
 
   &__bg {
     width: 100%;
-    background-color: rgba(19, 19, 19, 0.41);
+    background-color: rgba(66, 87, 140, 0.5);
     position: absolute;
     height: 100vh;
   }
@@ -39,9 +38,26 @@
     @include headers;
     color: #FFFFFA;
     text-align: center;
-    z-index: 2;
+    z-index: 1;
   }
+}
 
+@media (min-width: 500px) {
+  .main {
+    &__title {
+      width: 100%;
+      padding: 0 10rem;
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .main {
+    &__title {
+      font-size: 6rem;
+    }
+  }
 }
 
 </style>

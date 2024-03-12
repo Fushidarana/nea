@@ -56,5 +56,84 @@ body {
   width: 1.5rem;
 }
 
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header-icon {
+  width: 2rem;
+}
+
+.plain-text {
+  font-size: 1.3rem;
+  font-family: "Arial", 'sans-serif';
+  color: $grey;
+}
+
+.header-text {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $blue;
+}
+
+.small-header {
+  font-size: 2rem;
+  font-weight: bold;
+  color: $black;
+}
+
+
+@media (min-width: 500px) {
+  .icon {
+    width: 2rem;
+  }
+
+  .header-icon {
+    width: 3rem;
+  }
+
+  .plain-text {
+    font-size: 2rem;
+  }
+
+  .header-text {
+    font-size: 3.5rem;
+  }
+
+  .small-header {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .header-icon {
+    width: 4rem;
+  }
+
+  .header-text {
+    font-size: 4.5rem;
+  }
+
+  .small-header {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header-icon {
+    width: 5rem;
+  }
+
+  .header-text {
+    font-size: 4rem;
+  }
+
+  .small-header {
+    font-size: 3rem;
+  }
+}
 
 

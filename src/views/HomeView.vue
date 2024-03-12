@@ -1,7 +1,7 @@
 <script setup>
-import Map from "@/components/MapSection.vue";
-import PostsSection from "@/components/PostsSection.vue";
-import MainSection from "@/components/MainSection.vue";
+import Map from "@/components/HomeSections/MapSection.vue";
+import PostsSection from "@/components/HomeSections/PostsSection.vue";
+import MainSection from "@/components/HomeSections/MainSection.vue";
 </script>
 
 <template>

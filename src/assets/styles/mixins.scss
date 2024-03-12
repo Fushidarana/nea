@@ -1,18 +1,5 @@
 @import "variables";
 
-@mixin icon-buttons() {
-  background-color: $light-grey;
-  border: none;
-  border-radius: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-@mixin input() {
-  background-color: $light-grey;
-  border-radius: 1.5rem;
-}
 
 @mixin buttons() {
   background-color: $blue;
