@@ -17,10 +17,10 @@ const isMenu = ref(false)
 
     <div class="menu_links__desktop">
       <RouterLink to="/about" class="menu_links__desktop__link">О нас</RouterLink>
-      <RouterLink to="/" class="menu_links__desktop__link">Новости</RouterLink>
-      <RouterLink to="/" class="menu_links__desktop__link">Проекты</RouterLink>
-      <RouterLink to="/" class="menu_links__desktop__link">АНО "НИСИ"</RouterLink>
-      <RouterLink to="/" class="menu_links__desktop__link">Сотрудничество</RouterLink>
+      <RouterLink to="/news" class="menu_links__desktop__link">Новости</RouterLink>
+      <RouterLink to="/news" class="menu_links__desktop__link">Проекты</RouterLink>
+      <RouterLink to="/about" class="menu_links__desktop__link">АНО "НИСИ"</RouterLink>
+      <RouterLink to="/contact" class="menu_links__desktop__link">Сотрудничество</RouterLink>
     </div>
 
     <BurgerMenu class="header_center-menu" @click="isMenu = !isMenu"/>
@@ -43,10 +43,10 @@ const isMenu = ref(false)
 
     <div class="menu_links" v-if="isMenu">
       <RouterLink to="/about" class="menu_links__link">О нас</RouterLink>
-      <RouterLink to="/" class="menu_links__link">Новости</RouterLink>
-      <RouterLink to="/" class="menu_links__link">Проекты</RouterLink>
-      <RouterLink to="/" class="menu_links__link">АНО "НИСИ"</RouterLink>
-      <RouterLink to="/" class="menu_links__link">Сотрудничество</RouterLink>
+      <RouterLink to="/news" class="menu_links__link">Новости</RouterLink>
+      <RouterLink to="/news" class="menu_links__link">Проекты</RouterLink>
+      <RouterLink to="/about" class="menu_links__link">АНО "НИСИ"</RouterLink>
+      <RouterLink to="/contact" class="menu_links__link">Сотрудничество</RouterLink>
     </div>
 
   </header>

@@ -9,7 +9,7 @@ import {employees} from "@/constants/data.js";
         <img
             class="header-icon"
             src="@/assets/icons/academy-cap.png" alt="academy">
-        <p>Деятельность академии</p>
+        <p class="header-text">Деятельность академии</p>
       </div>
       <img
           class="about_academy__image"
@@ -28,7 +28,7 @@ import {employees} from "@/constants/data.js";
         <img
             class="header-icon"
             src="@/assets/icons/academy-cap.png" alt="academy">
-        <p>История Создания</p>
+        <p class="header-text">История Создания</p>
       </div>
       <p class="about_academy_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aut consequuntur dicta esse et
         exercitationem quam velit veritatis vitae? Blanditiis eius, enim incidunt obcaecati optio ullam voluptas. Ab
@@ -43,7 +43,7 @@ import {employees} from "@/constants/data.js";
         <img
             class="header-icon"
             src="@/assets/icons/people-group.png" alt="employees">
-        <p>Сотрудники</p>
+        <p class="header-text">Сотрудники</p>
       </div>
       <div class="employees__employees" v-for="el in employees">
         <img class="employees__employees_photo" :src="el.photo" alt="photo">
@@ -63,7 +63,7 @@ import {employees} from "@/constants/data.js";
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 15%;
+  padding: 15% 2rem;
 
   &_academy {
     &__image {
