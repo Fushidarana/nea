@@ -1,12 +1,14 @@
 <script setup>
-import UIButton from "@/components/UI/UIButton.vue";
 import Editor from '@tinymce/tinymce-vue';
+import UIReadMoreButton from "@/components/UI/UIReadMoreButton.vue";
 </script>
 
 <template>
   <div class="dump_info">
-    <p class="dump_info__header">ОСТАВЬТЕ ИНФОРМАЦИЮ О ТОЧКЕ</p>
+    <p class="header-text">ОСТАВЬТЕ ИНФОРМАЦИЮ О ТОЧКЕ</p>
+    <div class="dump_info_editor">
     <Editor
+
         api-key="2rjklnm2jyugr9igoegz1rcvnfwu2zv5qzfcc6towbobgi5t"
         :init="{
             plugins:'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage advtemplate ai mentions tableofcontents footnotes mergetags autocorrect typography inlinecss',
@@ -17,9 +19,9 @@ import Editor from '@tinymce/tinymce-vue';
       }"
         initial-value="Опишите свалку или прикрепите изображение..."
     >
-
     </Editor>
-    <UIButton text="Отправить"/>
+    </div>
+    <UIReadMoreButton text="Отправить"/>
   </div>
 </template>
 
@@ -36,12 +38,16 @@ import Editor from '@tinymce/tinymce-vue';
   background: $white;
   min-width: 80%;
   height: auto;
-  padding: 2rem;
-  margin: 1rem;
+  padding: 3rem 2rem;
+  margin: 4rem 10%;
 
-  &__header {
-    @include sub-headers;
+  &_editor {
+    height: auto;
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-
 }
 </style>

@@ -13,6 +13,7 @@ const map = shallowRef(null);
 
 const mapWidth = '100%'
 const mapHeight = '60vh'
+
 const longitude = ref(null)
 const latitude = ref(null)
 
@@ -27,14 +28,13 @@ const logMapClick = (_, event) => {
     showDialogWindow.value = true
   }, 1000)
 };
-
 </script>
 
 <template>
   <div class="map-container">
-    <div class="map-container_header">
-      <img class="map-container_header__icon" src="../../assets/icons/dump.png" alt="news">
-      <p>Отметить свалку</p>
+    <div class="header-container map_header">
+      <img class="header-icon" src="../../assets/icons/dump.png" alt="news">
+      <p class="header-text">Отметить свалку</p>
     </div>
 
     <div class="map-container_map">
@@ -60,8 +60,8 @@ const logMapClick = (_, event) => {
           </template>
         </yandex-map-marker>
       </yandex-map>
-      <DumpInfo/>
     </div>
+    <DumpInfo/>
   </div>
 </template>
 
@@ -69,24 +69,21 @@ const logMapClick = (_, event) => {
 @import "@/assets/styles/main";
 
 .map-container {
-  &_header {
-    @include sub-headers;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0 2rem 2rem 2rem;
-
-    &__icon {
-      width: 2rem;
-    }
-  }
+  padding: 2rem;
+  background-color: $light-grey;
 
   &_map {
+    margin: 2rem;
     display: flex;
     flex-direction: column;
-
+    border: $blue 0.3rem solid;
+    box-shadow: rgba(46,107,240,0.4) -5px 5px, rgba(30,104,201,0.3) -10px 10px, rgba(26,47,155,0.2) -15px 15px, rgba(1,19,138,0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;;;
   }
 }
 
+.map_header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 </style>

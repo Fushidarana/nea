@@ -4,16 +4,16 @@
 <template>
   <footer class="footer">
     <div class="footer_list">
-      <p>Новосибирская Экологическая Академия:</p>
+      <p class="small-header">Новосибирская Экологическая Академия:</p>
       <a href="#">О нас</a>
       <a href="#">Новости</a>
       <a href="#">Проекты</a>
-      <a href="#">АНО «НИСИ</a>
+      <a href="#">АНО "НИСИ"</a>
       <a href="#">Сотрудничество</a>
     </div>
 
     <div class="footer_contact">
-      <p>Сотрудничество:</p>
+      <p class="small-header">Сотрудничество:</p>
       <p>8-800-555-35-35</p>
       <p>nea@gmail.com</p>
     </div>
@@ -25,7 +25,7 @@
 @import "@/assets/styles/main";
 .footer {
   color: $white;
-  background-color: $dark-blue;
+  background-color: $grey;
   padding: 2rem 5rem;
   display: flex;
   justify-content: space-between;

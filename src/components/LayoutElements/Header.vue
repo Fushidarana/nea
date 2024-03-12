@@ -67,8 +67,8 @@ const isMenu = ref(false)
   align-items: center;
   height: 4rem;
   padding: 1rem 2rem;
-  background: $white;
-  box-shadow: 0 0.04rem 0.6rem 0.1rem $black;
+  background: white;
+  box-shadow: 0 0.04rem 0.9rem 0.5rem white;
 
   &_company-info {
     &__logo {
@@ -113,7 +113,10 @@ const isMenu = ref(false)
   width: calc(100% + 2rem);
   top: 100%;
   left: 0;
-  background: $white;
+  background: rgba(255, 255, 255, 1);
+  animation: appear 1s forwards;
+  box-shadow: rgb(255, 255, 255) 0px 3px 6px, rgb(255, 255, 255) 0px 3px 6px;
+
 
   &__link {
     color: $black;
@@ -215,6 +218,15 @@ const isMenu = ref(false)
         height: 100%;
       }
     }
+  }
+}
+
+@keyframes appear {
+  from {
+    left: 4rem;
+  }
+  to {
+    left: 0;
   }
 }
 </style>
