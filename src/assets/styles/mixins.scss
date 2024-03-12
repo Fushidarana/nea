@@ -1,0 +1,42 @@
+@import "variables";
+
+@mixin icon-buttons() {
+  background-color: $light-grey;
+  border: none;
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin input() {
+  background-color: $light-grey;
+  border-radius: 1.5rem;
+}
+
+@mixin buttons() {
+  background-color: $blue;
+  padding: 1.2rem;
+  outline: none;
+  border-radius: 2rem;
+  height: auto;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  color: $white;
+}
+
+@mixin headers() {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+@mixin sub-headers() {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $blue;
+}
+
