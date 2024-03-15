@@ -6,6 +6,7 @@
           src="@/assets/icons/academy-cap.png" alt="academy">
       <p class="header-text">Сотрудничество</p>
     </div>
+
     <div class="contact_info">
       <div class="contact_info_data">
         <div class="small-header">Адрес: <p class="highlight-text">ул.Пушкина, дом Колотушкина</p></div>
@@ -24,6 +25,13 @@
           <div class="line"/>
         </div>
         <button style="cursor: pointer">Отправить</button>
+      </div>
+
+      <div class="contact_info_form">
+        <p class="header-text">Связаться с нами</p>
+        <div class="contact_info_form_inputs">
+
+        </div>
       </div>
 
     </div>

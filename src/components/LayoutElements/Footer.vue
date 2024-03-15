@@ -4,7 +4,7 @@
 <template>
   <footer class="footer">
     <div class="footer_list">
-      <p class="header-text">Новосибирская Экологическая Академия:</p>
+      <p class="small-header">Новосибирская Экологическая Академия:</p>
       <a href="#">О нас</a>
       <a href="#">Новости</a>
       <a href="#">Проекты</a>
@@ -13,7 +13,7 @@
     </div>
 
     <div class="footer_contact">
-      <p class="header-text">Сотрудничество:</p>
+      <p class="small-header">Сотрудничество:</p>
       <p>8-800-555-35-35</p>
       <p>nea@gmail.com</p>
     </div>
