@@ -44,7 +44,7 @@ import UIButton from "@/components/UI/UIButton.vue";
 
 <style lang="scss">
 .account {
-  padding: 5rem 3rem;
+  padding: 20% 3rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -58,20 +58,20 @@ import UIButton from "@/components/UI/UIButton.vue";
 
 @media (min-width: 500px) {
   .account {
-    padding: 6rem 7rem;
+    padding: 18% 7rem;
     gap: 2rem;
   }
 }
 
 @media (min-width: 992px) {
   .account {
-    padding: 9rem 15rem;
+    padding: 10% 15rem;
   }
 }
 
 @media (min-width: 1200px) {
   .account {
-    padding: 1.5% 25rem;
+    padding: 11% 25rem;
     &_only-user {
       flex-direction: row;
       align-items: center;

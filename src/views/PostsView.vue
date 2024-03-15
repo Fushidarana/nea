@@ -17,7 +17,7 @@ import PostTemplate from '@/components/PostTemplate.vue'
 
 <style lang="scss">
 .news {
-  padding: 5% 8%;
+  padding: 20% 8%;
 
   &_container {
     display: flex;
@@ -28,19 +28,31 @@ import PostTemplate from '@/components/PostTemplate.vue'
 
 @media (min-width: 500px) {
   .news {
-    padding: 5% 10%;
+    padding: 18% 10%;
+  }
+}
+
+@media (min-width: 768px) {
+  .news {
+    padding: 15% 10%;
   }
 }
 
 @media (min-width: 992px) {
   .news {
-    padding: 4% 18%;
+    padding: 10% 18%;
   }
 }
 
 @media (min-width: 1200px) {
   .news {
-    padding: 2% 20%;
+    padding: 12% 20%;
+  }
+}
+
+@media (min-width: 1500px) {
+  .news {
+    padding: 10% 20%;
   }
 }
 </style>

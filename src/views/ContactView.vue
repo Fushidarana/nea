@@ -62,7 +62,7 @@ async function sendEmail() {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 5% 7%;
+  padding: 20% 7%;
 
   &_form {
     background-color: $secondary1;
@@ -115,13 +115,19 @@ textarea {
 
 @media (min-width: 500px) {
   .contact {
-    padding: 5% 10% 7% 10%;
+    padding: 18% 10% 7% 10%;
+  }
+}
+
+@media (min-width: 992px) {
+  .contact {
+    padding: 15% 10% 7% 10%;
   }
 }
 
 @media (min-width: 1200px) {
   .contact {
-    padding: 2% 20% 7% 20%;
+    padding: 12% 20% 7% 20%;
 
       &_form {
         width: 60%;
@@ -132,5 +138,19 @@ textarea {
       }
     }
   }
+
+@media (min-width: 1500px) {
+  .contact {
+    padding: 8% 20% 7% 20%;
+
+    &_form {
+      width: 60%;
+    }
+
+    &_data {
+      width: 50%;
+    }
+  }
+}
 
 </style>

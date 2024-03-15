@@ -71,7 +71,7 @@ import {employees} from "@/constants/data.js";
   flex-direction: column;
   justify-content: center;
   gap: 3rem;
-  padding: 8% 2rem;
+  padding: 20% 2rem;
 
   &_academy {
     display: flex;
@@ -112,21 +112,21 @@ import {employees} from "@/constants/data.js";
 @media (min-width: 500px) {
   .about {
     gap: 3rem;
-    padding: 4% 5rem;
+    padding: 16% 5rem;
   }
 }
 
 @media (min-width: 992px) {
   .about {
     gap: 4rem;
-    padding: 2% 10%;
+    padding: 12% 10%;
   }
 }
 
 @media (min-width: 1200px) {
   .about {
     gap: 5rem;
-    padding: 2% 15%;
+    padding: 12% 15%;
 
     &_employees {
       &__employees {
@@ -147,6 +147,31 @@ import {employees} from "@/constants/data.js";
       }
     }
   }
+}
 
+@media (min-width: 1500px) {
+  .about {
+    gap: 5rem;
+    padding: 10% 15%;
+
+    &_employees {
+      &__employees {
+        padding: 2rem;
+        display: flex;
+        gap: 15rem;
+        height: 20%;
+
+        &_photo {
+          width: 30%;
+        }
+
+        &_info {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+        }
+      }
+    }
+  }
 }
 </style>
