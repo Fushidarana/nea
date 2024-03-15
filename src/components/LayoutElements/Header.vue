@@ -67,7 +67,7 @@ window.addEventListener('resize', () => {
   justify-content: space-between;
   gap: 2%;
   padding: 3% 5%;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
   height: auto;
 
@@ -227,7 +227,7 @@ window.addEventListener('resize', () => {
     }
 
     &_right-panel {
-      width: 60%;
+
       padding: 2%;
       justify-content: right;
 
