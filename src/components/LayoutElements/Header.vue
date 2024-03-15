@@ -58,8 +58,8 @@ window.addEventListener('resize', () => {
 @import "@/assets/styles/main";
 
 .header {
-  position: relative;
-  top: 10%;
+  position: fixed;
+  top: 0;
   background-color: $primary0;
   box-shadow: 0 0.04rem 0.9rem 0.5rem #edf6f9;
   display: flex;
@@ -69,6 +69,7 @@ window.addEventListener('resize', () => {
   padding: 3% 5%;
   z-index: 1;
   width: 100%;
+  height: auto;
 
   &_company-info {
     height: 100%;
@@ -156,7 +157,6 @@ window.addEventListener('resize', () => {
 
 @media (min-width: 500px) {
   .header {
-    height: 8%;
     padding: 2% 4%;
 
     &_company-info {
@@ -174,7 +174,6 @@ window.addEventListener('resize', () => {
 
 @media (min-width: 992px) {
   .header {
-    height: 7%;
     padding: 1% 8%;
 
     &_menu_links__desktop {
@@ -195,7 +194,6 @@ window.addEventListener('resize', () => {
 
 @media (min-width: 1200px) {
   .header {
-    height: 7%;
     padding: 1% 8%;
 
     &_company-info {
@@ -220,7 +218,6 @@ window.addEventListener('resize', () => {
 
 @media (min-width: 1600px) {
   .header {
-    height: 0.5%;
     padding: 0.3% 10%;
 
     &_company-info {
