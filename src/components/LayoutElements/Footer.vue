@@ -58,7 +58,7 @@
 
 @media (min-width: 1200px) {
   .footer {
-    padding: 4rem 8rem;
+    padding: 4rem 8%;
     font-size: 3rem;
   }
 }

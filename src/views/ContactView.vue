@@ -8,39 +8,28 @@
     </div>
 
     <div class="contact_info">
-      <div class="contact_info_data">
-        <div class="small-header">Адрес: <p class="highlight-text">ул.Пушкина, дом Колотушкина</p></div>
-        <div class="small-header">Почта: <p class="highlight-text">nea@gmail.com</p></div>
-        <div class="small-header">Номер: <p class="highlight-text">8-800-555-35-35</p></div>
-        <div class="small-header">Соц-сети: <p class="highlight-text">tme: @nea</p></div>
-      </div>
-      <div class="contact_info_form">
-        <p class="header-text">Связаться с нами</p>
-        <div class="contact_info_form_inputs">
-          <input class="contact_input" v-model="name" type="text" placeholder="Имя" required>
-          <div class="line"/>
-          <input class="contact_input" v-model="email" type="email" placeholder="Электронная почта" required>
-          <div class="line"/>
-          <textarea class="contact_input" v-model="message" placeholder="Комментарий"/>
-          <div class="line"/>
-        </div>
-        <button style="cursor: pointer">Отправить</button>
-      </div>
+      <div class="small-header">Адрес: <p class="highlight-text">ул.Пушкина, дом Колотушкина</p></div>
+      <div class="small-header">Почта: <p class="highlight-text">nea@gmail.com</p></div>
+      <div class="small-header">Номер: <p class="highlight-text">8-800-555-35-35</p></div>
+      <div class="small-header">Соц-сети: <p class="highlight-text">tme: @nea</p></div>
+    </div>
 
-      <div class="contact_info_form">
-        <p class="header-text">Связаться с нами</p>
-        <div class="contact_info_form_inputs">
-
-        </div>
-      </div>
-
+    <div class="contact_form">
+      <p class="contact_form_header header-text">Связаться с нами</p>
+      <input class="contact_form_input" v-model="name" type="text" placeholder="Имя" required>
+      <div class="line"/>
+      <input class="contact_form_input" v-model="email" type="email" placeholder="Электронная почта" required>
+      <div class="line"/>
+      <textarea class="contact_form_input" v-model="message" placeholder="Комментарий"/>
+      <div class="line"/>
+      <UIButton text="Отправить"/>
     </div>
   </form>
 </template>
 
 <script setup>
 import {ref} from "vue";
-import UIInput from "@/components/UI/UIInput.vue";
+import UIButton from "@/components/UI/UIButton.vue";
 
 const name = ref('')
 const email = ref('')
@@ -71,10 +60,26 @@ async function sendEmail() {
 
 .contact {
   width: 100%;
-  margin-top: 6rem;
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 5% 7%;
+
+  &_form {
+    background-color: $secondary1;
+    border-radius: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 5%;
+
+    &_header {
+      padding-bottom: 2rem;
+    }
+
+    &_input {
+      background: transparent;
+      all: unset;
+      font-size: 2rem;
+    }
+  }
 
   &_info {
     padding: 2rem 0;
@@ -82,18 +87,6 @@ async function sendEmail() {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-
-    &_form {
-      width: 100%;
-      padding: 4% 7%;
-      background-color: $secondary1;
-      border-radius: 1.5rem;
-      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
-      &_inputs {
-        padding-top: 2rem;
-      }
-    }
   }
 }
 
@@ -104,66 +97,34 @@ async function sendEmail() {
   background-color: $secondary2;
 }
 
-button {
-  border-radius: 3rem;
-  border: none;
-  font-size: 2rem;
-  padding: 2rem 6rem;
-  margin-top: 2%;
-  font-weight: 800;
-}
-
-.contact_input {
-  background: transparent;
-  all: unset;
-  font-size: 2rem;
-  padding-bottom: 1.9rem;
-}
-
 textarea {
   background: transparent;
   outline: none;
   border: none;
   font-size: 2rem;
   width: 100%;
-  height: 18.9rem;
+  min-height: 18.9rem;
+  height: auto;
   padding-top: 2%;
-}
-
-textarea::placeholder {
 }
 
 ::-webkit-input-placeholder {
   font-size: 2rem;
 }
 
-@media (min-width: 992px) {
+
+@media (min-width: 500px) {
   .contact {
-    align-items: center;
-    padding: 7rem 10rem;
-
-    &_info {
-      padding-top: 4rem;
-      flex-direction: row;
-      &_form {
-        width: 50%;
-      }
-
-      &_data {
-        width: 50%;
-      }
-    }
+    padding: 5% 10% 7% 10%;
   }
 }
 
 @media (min-width: 1200px) {
   .contact {
-    padding: 7rem 25rem;
+    padding: 2% 20% 7% 20%;
 
-    &_info {
-      flex-direction: row;
       &_form {
-        width: 50%;
+        width: 60%;
       }
 
       &_data {
@@ -171,6 +132,5 @@ textarea::placeholder {
       }
     }
   }
-}
 
 </style>

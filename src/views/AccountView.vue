@@ -37,9 +37,7 @@ import UIButton from "@/components/UI/UIButton.vue";
       <UIButton text="Подписаться"/>
       <div>
       </div>
-
     </div>
-
   </div>
 </template>
 
