@@ -14,7 +14,7 @@
 
 .main {
   height: 100vh;
-  color: $black;
+  color: $secondary3;
   padding: 0;
   width: 100%;
   display: flex;

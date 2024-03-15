@@ -47,19 +47,19 @@ export default defineComponent({
 
 @media (min-width: 500px) {
   .sections {
-    padding: 3rem;
+    padding: 3rem 10%;
   }
 }
 
   @media (min-width: 992px) {
     .sections {
-      padding: 3rem 9rem;
+      padding: 3rem 15%;
     }
   }
 
   @media (min-width: 1200px) {
     .sections {
-      padding: 4rem 25rem;
+      padding: 4rem 20%;
     }
   }
 </style>

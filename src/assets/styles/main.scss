@@ -21,11 +21,26 @@ a {
 }
 
 a:hover {
-  color: $orange;
+  color: $accent2;
+  font-weight: bold;
 }
 
 input {
   all: unset;
+  width: 100%;
+}
+
+.input_container{
+  background-color: $secondary1;
+  border-radius: 1.5rem;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  width: 100%;
+  font-size: 1.5rem;
 }
 
 input[type="search"]::-webkit-search-cancel-button {
@@ -37,7 +52,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 body {
-  background-color: $white;
+  background-color: $base;
   -webkit-text-size-adjust: 100%;
   font-family: "PT Sans Narrow", sans-serif;
   text-rendering: optimizeSpeed;
@@ -57,7 +72,7 @@ body {
   animation: block-appear .7s ease-in-out;
 }
 
-.icon {
+.icon-input {
   width: 1.5rem;
 }
 
@@ -72,31 +87,32 @@ body {
 }
 
 .plain-text {
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   font-family: "Arial", 'sans-serif';
-  color: $grey;
+  color: $secondary2;
 }
 
 .header-text {
-  font-size: 2.5rem;
+  font-size: 3rem;
   text-transform: uppercase;
   font-weight: bold;
-  color: $blue;
+  color: $primary2;
 }
 
 .small-header {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  color: $black;
+  color: $secondary2;
 }
 
 .highlight-text {
-  color: $orange;
+  color: $accent2;
+  font-weight: bold;
 }
 
 
 @media (min-width: 500px) {
-  .icon {
+  .icon-input {
     width: 2rem;
   }
 
@@ -105,14 +121,28 @@ body {
   }
 
   .plain-text {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .header-text {
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
 
   .small-header {
+    font-size: 3.5rem;
+  }
+
+  .input_container {
+    padding: 1.5rem;
+    width: 80%;
+    font-size: 2rem;
+  }
+
+  .header-container {
+    gap: 1rem;
+  }
+
+  .highlight-text {
     font-size: 3rem;
   }
 }
@@ -123,12 +153,21 @@ body {
   }
 
   .header-text {
-    font-size: 4.5rem;
+    font-size: 5rem;
   }
 
   .small-header {
-    font-size: 4rem;
+    font-size: 4.5rem;
   }
+
+  .input_container {
+    width: 70%;
+  }
+
+  .header-container {
+    gap: 1.3rem;
+  }
+
 }
 
 @media (min-width: 1200px) {
@@ -137,11 +176,16 @@ body {
   }
 
   .header-text {
-    font-size: 4rem;
+    font-size: 4.5rem;
   }
 
   .small-header {
-    font-size: 3rem;
+    font-size: 3.5rem;
+  }
+
+  .input_container {
+    width: 50%;
+    font-size: 2rem;
   }
 }
 

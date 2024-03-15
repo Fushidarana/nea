@@ -15,12 +15,14 @@
       </div>
       <div class="contact_info_form">
         <p class="header-text">Связаться с нами</p>
-        <input v-model="name" type="text" placeholder="Имя" required>
-        <div class="line"/>
-        <input v-model="email" type="email" placeholder="Электронная почта" required>
-        <div class="line"/>
-        <textarea v-model="message" placeholder="Комментарий"/>
-        <div class="line"/>
+        <div class="contact_info_form_inputs">
+          <input class="contact_input" v-model="name" type="text" placeholder="Имя" required>
+          <div class="line"/>
+          <input class="contact_input" v-model="email" type="email" placeholder="Электронная почта" required>
+          <div class="line"/>
+          <textarea class="contact_input" v-model="message" placeholder="Комментарий"/>
+          <div class="line"/>
+        </div>
         <button style="cursor: pointer">Отправить</button>
       </div>
 
@@ -30,6 +32,7 @@
 
 <script setup>
 import {ref} from "vue";
+import UIInput from "@/components/UI/UIInput.vue";
 
 const name = ref('')
 const email = ref('')
@@ -43,7 +46,7 @@ async function sendEmail() {
   //     message: message.value,
   //   };
   //   await axios.post(
-  //       "https://webform.dkotrack.com/api/new/desilaza.com",
+  //       "https://....com",
   //       payload
   //   );
   // } catch (error) {
@@ -74,10 +77,14 @@ async function sendEmail() {
 
     &_form {
       width: 100%;
-      padding: 8% 7%;
-      background-color: $light-grey;
+      padding: 4% 7%;
+      background-color: $secondary1;
       border-radius: 1.5rem;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+      &_inputs {
+        padding-top: 2rem;
+      }
     }
   }
 }
@@ -86,7 +93,7 @@ async function sendEmail() {
   width: 100%;
   height: 1px;
   margin-bottom: 5.2rem;
-  background-color: $grey;
+  background-color: $secondary2;
 }
 
 button {
@@ -98,7 +105,7 @@ button {
   font-weight: 800;
 }
 
-input {
+.contact_input {
   background: transparent;
   all: unset;
   font-size: 2rem;
@@ -128,6 +135,7 @@ textarea::placeholder {
     padding: 7rem 10rem;
 
     &_info {
+      padding-top: 4rem;
       flex-direction: row;
       &_form {
         width: 50%;

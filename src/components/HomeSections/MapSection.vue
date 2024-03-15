@@ -70,13 +70,13 @@ const logMapClick = (_, event) => {
 
 .map-container {
   padding: 2rem;
-  background-color: $light-grey;
+  background-color: $secondary1;
 
   &_map {
     margin: 2rem;
     display: flex;
     flex-direction: column;
-    border: $blue 0.3rem solid;
+    border: $primary2 0.3rem solid;
     box-shadow: rgba(46,107,240,0.4) -5px 5px, rgba(30,104,201,0.3) -10px 10px, rgba(26,47,155,0.2) -15px 15px, rgba(1,19,138,0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;;;
   }
 }
@@ -85,5 +85,16 @@ const logMapClick = (_, event) => {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (min-width: 1200px) {
+  .map-container {
+    padding: 2rem;
+    background-color: $secondary1;
+
+    &_map {
+      margin: 1% 10%;
+    }
+  }
 }
 </style>

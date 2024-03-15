@@ -45,7 +45,7 @@
 
   &_image_container {
     width: 70%;
-    background-color: $light-blue;
+    background-color: $primary2;
     border-radius: 1.5rem;
     display: flex;
     justify-content: center;

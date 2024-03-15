@@ -36,7 +36,7 @@ window.addEventListener('resize', () => {
 .nav-icon__burger1 {
   width: 2rem;
   height: 0.2rem;
-  background: $dark-blue;
+  background: $primary3;
   border-radius: 1rem;
   transition: all .3s ease-in-out;
 }
@@ -44,7 +44,7 @@ window.addEventListener('resize', () => {
 .nav-icon__burger2 {
   width: 2rem;
   height: 0.2rem;
-  background: $dark-blue;
+  background: $primary3;
   border-radius: 1rem;
   transition: all .3s ease-in-out;
 }

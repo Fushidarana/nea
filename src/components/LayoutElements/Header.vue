@@ -1,8 +1,15 @@
 <script setup>
 import {ref} from "vue";
 import BurgerMenu from "@/components/BurgerMenu.vue";
+import UIInput from "@/components/UI/UIInput.vue";
 
-const isMenu = ref(false)
+const isMenu = ref(false);
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth >= 500) {
+    return isMenu.value = false
+  }
+})
 </script>
 
 <template>
@@ -15,7 +22,7 @@ const isMenu = ref(false)
       </a>
     </div>
 
-    <div class="menu_links__desktop">
+    <div class="header_menu_links__desktop">
       <RouterLink to="/about" class="menu_links__desktop__link">О нас</RouterLink>
       <RouterLink to="/news" class="menu_links__desktop__link">Новости</RouterLink>
       <RouterLink to="/news" class="menu_links__desktop__link">Проекты</RouterLink>
@@ -26,27 +33,21 @@ const isMenu = ref(false)
     <BurgerMenu class="header_center-menu" @click="isMenu = !isMenu"/>
 
     <div class="header_right-panel">
-      <div class="header_right-panel__input">
-        <img
-            src="@/assets/icons/search.png"
-            alt="search"
-            class="icon">
-        <input type="search">
-      </div>
-      <button class="header_right-panel__button">
+      <UIInput type="search" icon="search" alt="search" placeholder="Найти..."/>
+      <RouterLink to="/account" class="header_right-panel__button">
         <img
             src="@/assets/icons/user.png"
             alt="search"
-            class="icon">
-      </button>
+            class="icon-input">
+      </RouterLink>
     </div>
 
-    <div class="menu_links" v-if="isMenu">
-      <RouterLink to="/about" class="menu_links__link">О нас</RouterLink>
-      <RouterLink to="/news" class="menu_links__link">Новости</RouterLink>
-      <RouterLink to="/news" class="menu_links__link">Проекты</RouterLink>
-      <RouterLink to="/about" class="menu_links__link">АНО "НИСИ"</RouterLink>
-      <RouterLink to="/contact" class="menu_links__link">Сотрудничество</RouterLink>
+    <div class="header_menu_links" v-if="isMenu">
+      <RouterLink to="/about">О нас</RouterLink>
+      <RouterLink to="/news">Новости</RouterLink>
+      <RouterLink to="/news">Проекты</RouterLink>
+      <RouterLink to="/about">АНО "НИСИ"</RouterLink>
+      <RouterLink to="/contact">Сотрудничество</RouterLink>
     </div>
 
   </header>
@@ -57,166 +58,187 @@ const isMenu = ref(false)
 @import "@/assets/styles/main";
 
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 3;
-  width: 100%;
+  position: relative;
+  top: 10%;
+  background-color: $primary0;
+  box-shadow: 0 0.04rem 0.9rem 0.5rem #edf6f9;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  height: 4rem;
-  padding: 1rem 2rem;
-  background: white;
-  box-shadow: 0 0.04rem 0.9rem 0.5rem white;
+  justify-content: space-between;
+  gap: 2%;
+  padding: 3% 5%;
+  z-index: 1;
+  width: 100%;
 
   &_company-info {
+    height: 100%;
+
     &__logo {
-      width: 3rem;
+      height: 4rem;
     }
+  }
+
+  &_menu_links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    position: absolute;
+    font-size: 1.5rem;
+    font-weight: bold;
+    top: 100%;
+    background-color: $primary0;
+    box-shadow: 0 0.04rem 0.9rem 0.5rem #edf6f9;
+    width: 100%;
+    left: 0;
+    padding: 2rem 0;
+    animation: appear 1s forwards;
+  }
+
+  &_menu_links__desktop {
+    display: none;
   }
 
   &_right-panel {
     display: flex;
-    height: 2.5rem;
     gap: 1rem;
 
     &__button {
-      background-color: $light-grey;
-      border: none;
-      border-radius: 1.5rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 1rem;
-    }
-
-    &__input {
-      background-color: $light-grey;
+      padding: .75rem 1.25rem;
       border-radius: 1.5rem;
-      height: 100%;
-      display: flex;
-      justify-content: start;
-      align-items: center;
-      gap: 1rem;
-      padding: 1rem;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 1rem;
+      letter-spacing: .15rem;
+      transition: all .3s;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      height: auto;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $secondary1;
+        border-radius: 1.5rem;
+        z-index: -2;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: darken($secondary1, 15%);
+        transition: all .3s;
+        border-radius: 1.5rem;
+        z-index: -1;
+      }
+
+      &:hover {
+        color: #fff;
+
+        &:before {
+          width: 100%;
+        }
+      }
     }
   }
-}
-
-.menu_links {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 2rem 0;
-  position: absolute;
-  width: calc(100% + 2rem);
-  top: 100%;
-  left: 0;
-  background: rgba(255, 255, 255, 1);
-  animation: appear 1s forwards;
-  box-shadow: rgb(255, 255, 255) 0px 3px 6px, rgb(255, 255, 255) 0px 3px 6px;
-
-
-  &__link {
-    color: $black;
-    font-size: 1.5rem;
-
-    &:hover {
-      color: $yellow;
-    }
-  }
-}
-
-.menu_links__desktop {
-  display: none;
-
-  &__link {
-    font-size: 2rem;
-    color: $black;
-
-    &:hover {
-      color: $orange;
-    }
-  }
-
 }
 
 @media (min-width: 500px) {
   .header {
-    height: 5rem;
-    padding: 1.5rem;
+    height: 8%;
+    padding: 2% 4%;
 
     &_company-info {
       &__logo {
-        width: 4rem;
+        height: 6rem;
       }
     }
 
-    &_right-panel {
-      max-height: 3rem;
-      gap: 3rem;
-
-      &__input {
-        width: 90%;
-        gap: 1rem;
-        padding: 1rem;
-      }
+    &_menu_links {
+      font-size: 2em;
+      gap: 2.5rem;
     }
   }
 }
 
 @media (min-width: 992px) {
   .header {
-    height: 6rem;
-    padding: 1rem 2rem;
+    height: 7%;
+    padding: 1% 8%;
 
-    &_company-info {
-      &__logo {
-        width: 5rem;
-      }
-    }
-
-    &_right-panel {
-      width: 40%;
-      height: 5rem;
+    &_menu_links__desktop {
+      display: flex;
       gap: 2rem;
-
-      &__input {
-        height: 100%;
-      }
+      font-size: 1.7rem;
     }
-  }
 
-  .header_center-menu {
-    display: none;
-  }
+    &_center-menu {
+      display: none;
+    }
 
-  .menu_links__desktop {
-    display: flex;
-    gap: 4rem;
+    &_menu_links {
+      display: none;
+    }
   }
 }
 
 @media (min-width: 1200px) {
   .header {
-    height: 9rem;
-    padding: 2rem 18rem;
+    height: 7%;
+    padding: 1% 8%;
 
     &_company-info {
       &__logo {
-        width: 6rem;
+        height: 8rem;
       }
     }
 
     &_right-panel {
-      width: 30%;
-      height: 7rem;
-      gap: 2rem;
+      width: 40%;
+      padding: 2%;
+      justify-content: right;
 
-      &__input {
-        height: 100%;
+    }
+
+    &_menu_links__desktop {
+      gap: 3rem;
+      font-size: 2rem;
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .header {
+    height: 0.5%;
+    padding: 0.3% 10%;
+
+    &_company-info {
+      &__logo {
+        height: 10rem;
       }
+    }
+
+    &_right-panel {
+      width: 60%;
+      padding: 2%;
+      justify-content: right;
+
+    }
+
+    &_menu_links__desktop {
+      gap: 3rem;
+      font-size: 2.5rem;
     }
   }
 }

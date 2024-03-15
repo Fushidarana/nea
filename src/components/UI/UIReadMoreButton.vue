@@ -14,6 +14,7 @@ const props = defineProps({
 
 <style lang="scss">
 @import "@/assets/styles/main";
+
 .ui-read-more {
   margin-top: 2rem;
   display: flex;
@@ -23,11 +24,11 @@ const props = defineProps({
   animation: bounce 2s infinite ease-in-out;
 
   &_button {
-    background-color: $blue;
+    background-color: $primary2;
     text-transform: uppercase;
     border-radius: 1.5rem;
     border: none;
-    color: $white;
+    color: white;
     font-weight: bold;
     padding: 1rem;
     width: 20%;
@@ -35,10 +36,10 @@ const props = defineProps({
     text-align: center;
 
     &:hover {
-      background-color: $orange;
+      background-color: $accent2;
+      color: $secondary3;
     }
   }
-
   &_icon {
     width: 4rem;
 
@@ -51,6 +52,7 @@ const props = defineProps({
       width: 30%;
       font-size: 2rem;
     }
+
     &_icon {
       width: 5rem;
     }
@@ -62,6 +64,15 @@ const props = defineProps({
     &_button {
       width: 20%;
       font-size: 2rem;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .ui-read-more {
+    &_button {
+      width: 20%;
+      font-size: 3rem;
     }
   }
 }

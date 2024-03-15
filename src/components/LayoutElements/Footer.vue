@@ -4,7 +4,7 @@
 <template>
   <footer class="footer">
     <div class="footer_list">
-      <p class="small-header">Новосибирская Экологическая Академия:</p>
+      <p class="header-text">Новосибирская Экологическая Академия:</p>
       <a href="#">О нас</a>
       <a href="#">Новости</a>
       <a href="#">Проекты</a>
@@ -13,7 +13,7 @@
     </div>
 
     <div class="footer_contact">
-      <p class="small-header">Сотрудничество:</p>
+      <p class="header-text">Сотрудничество:</p>
       <p>8-800-555-35-35</p>
       <p>nea@gmail.com</p>
     </div>
@@ -24,8 +24,8 @@
 <style lang="scss">
 @import "@/assets/styles/main";
 .footer {
-  color: $white;
-  background-color: $grey;
+  color: $base;
+  background-color: $secondary2;
   padding: 2rem 5rem;
   display: flex;
   justify-content: space-between;
